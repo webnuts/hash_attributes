@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jacob Madsen", "Martin Thoegersen"]
   s.email       = ["hello@webnuts.com"]
   s.homepage    = "https://github.com/webnuts/hash_attributes"
-  s.summary     = "Use a Hash column as backend for dynamic attributes"
-  s.description = "Use a Hash column as backend for dynamic attributes. Dynamic attributes will act like table columns. Just include the HashAttributes module in your ActiveRecord::Base class."
+  s.summary     = "Use an ActiveRecord Hash column as backend for dynamic attributes"
+  s.description = "Use an ActiveRecord Hash column as backend for dynamic attributes. Dynamic attributes will act like table columns. Just include the HashAttributes module in your ActiveRecord::Base class."
   s.license     = 'MIT'
 
   s.files = Dir["{lib,spec}/**/*", "MIT-LICENSE", "Rakefile", "README.md"].select{ |p| p.include?("spec/dummy/log") == false }
