@@ -217,22 +217,6 @@ module HashAttributes
     end
   end
 
-  # def attribute_was(attribute_name)
-  #   attribute_name = attribute_name.to_s
-  #   if is_valid_hash_column_attribute_name?(attribute_name)
-  #     __hash_column__ = changed_attributes[self.class.hash_column]
-  #     if __hash_column__.present?
-  #       __hash_column__[attribute_name]
-  #     else
-  #       __send__(attribute_name)
-  #     end
-  #   else
-  #     super(attribute_name)
-  #   end
-  # end
-
-
-
   module ClassMethods
     def hash_column
       @hash_column ||= "__hash_column"
@@ -267,10 +251,6 @@ module HashAttributes
           end
 
           def #{attribute_name}=(value)
-            # if value != read_attribute('#{attribute_name}')
-            #   reset_attribute!('#{attribute_name}')
-            #   attribute_will_change!('#{attribute_name}')
-            # end
             write_attribute('#{attribute_name}', value)
           end
         RUBY
